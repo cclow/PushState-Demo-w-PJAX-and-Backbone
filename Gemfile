@@ -37,6 +37,8 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'simple_form'
+gem 'stache'
+
 group :assets do
   gem 'haml-rails'
   gem 'modernizr-rails'

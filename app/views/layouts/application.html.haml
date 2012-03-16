@@ -14,7 +14,7 @@
       }
     = stylesheet_link_tag "application", :media => "all"
     / Le fav and touch icons
-    %link{:href => "images/favicon.ico", :rel => "shortcut icon"}/
+    / %link{:href => "images/favicon.ico", :rel => "shortcut icon"}/
     %link{:href => "images/apple-touch-icon.png", :rel => "apple-touch-icon"}/
     %link{:href => "images/apple-touch-icon-72x72.png", :rel => "apple-touch-icon", :sizes => "72x72"}/
     %link{:href => "images/apple-touch-icon-114x114.png", :rel => "apple-touch-icon", :sizes => "114x114"}/
@@ -31,7 +31,7 @@
           %a.brand{:href => "#"}PushstateDemo
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Link 1", "/path1"
+              %li= link_to "Articles", "/articles"
               %li= link_to "Link 2", "/path2"
               %li= link_to "Link 3", "/path3"
 
@@ -39,18 +39,12 @@
 
       .content
         .row
-          .span9
-            = yield
+          .span4#articles
+            = yield :articles
           .span1 &nbsp;
-          .span3
-            .well.sidebar-nav
-              %h3 Sidebar
-              %ul.nav.nav-list
-                %li.nav-header Sidebar
-                %li= link_to "Link 1", "/path1"
-                %li= link_to "Link 2", "/path2"
-                %li= link_to "Link 3", "/path3"
-    
+          .span7#article_content
+            = yield :article_content
+            
       %footer
         %p &copy; Company 2012
     /

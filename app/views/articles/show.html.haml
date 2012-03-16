@@ -1,0 +1,9 @@
+- content_for :articles do
+  %table.table#articles_table
+    = render @articles
+
+- content_for :article_content do
+  = render 'articles/article_content'
+
+- content_for :title do
+  = @title
