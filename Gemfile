@@ -38,6 +38,8 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'simple_form'
 gem 'stache'
+gem 'backbone-rails'
+gem 'gon'
 
 group :assets do
   gem 'haml-rails'

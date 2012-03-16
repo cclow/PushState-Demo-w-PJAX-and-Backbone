@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @articles = Article.all
+    gon.articles = @articles = Article.all
     @active = params[:id]
     @article = Article.find(params[:id])
     @title = "Article: #{@article.title}"
