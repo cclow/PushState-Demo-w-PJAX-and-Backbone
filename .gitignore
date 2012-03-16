@@ -1,0 +1,17 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+.DS_Store
+TAGS
+**/*~
+.#*
+db/schema.rb
+db/*.sqlite3
+config/database.yml
+doc/api
+doc/app
+coverage/*
+*.swp
+public/stylesheets/compiled/*
+vendor/ruby
