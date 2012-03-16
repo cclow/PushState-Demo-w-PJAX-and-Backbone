@@ -1,7 +1,4 @@
 - current = (@active == article.id.to_s)
 %tr[article]{class: current ? "active" : ""}
   %td
-    - if current
-      = article.title
-    - else
-      %a.article_link{href: "#{article_path(article)}"}= article.title
+    %a.article_link{href: "#{article_path(article)}"}= article.title
