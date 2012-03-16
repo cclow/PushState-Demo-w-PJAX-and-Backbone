@@ -12,6 +12,10 @@ class ArticlesController < ApplicationController
     @active = params[:id]
     @article = Article.find(params[:id])
     @title = "Article: #{@article.title}"
-    respond_with @article
+    if request.headers['X-PJAX']
+      render 'pjax_show', layout: false
+    else
+      respond_with @article
+    end
   end
 end
