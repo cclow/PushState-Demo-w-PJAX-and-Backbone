@@ -1,4 +1,6 @@
-window.setActiveArticle = (active_id) ->
+window.App = {}
+
+App.setActiveArticle = (active_id) ->
   $('.article.active').removeClass('active')
   $(active_id).addClass('active')
 
